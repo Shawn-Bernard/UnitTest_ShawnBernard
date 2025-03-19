@@ -5,13 +5,18 @@ using System.Collections.Generic;
 namespace UnitTest_ShawnBernard
 {
     /// <summary>
-    /// Defines movement directions.
+    /// A direction that has state for up, down, left and right
     /// </summary>
     public enum Direction { Up, Down, Left, Right }
+    /// <summary>
+    /// Unit testing for player that uses the player move
+    /// </summary>
     [TestClass]
-
     public class UnitTest_Player : Player
     {
+        /// <summary>
+        /// Moves the player right 1 and checks player position and checks tile
+        /// </summary>
         [TestMethod]
         public void Player_CanMoveRight()
         {
@@ -22,7 +27,9 @@ namespace UnitTest_ShawnBernard
             Assert.AreEqual(0, CheckTile(X, Y));
             Assert.IsTrue(CanMove);
         }
-
+        /// <summary>
+        /// Moves the player left1 and checks player position and checks tile
+        /// </summary>
         [TestMethod]
         public void Player_CanMoveLeft()
         {
@@ -32,7 +39,9 @@ namespace UnitTest_ShawnBernard
             Assert.AreEqual(0, CheckTile(X, Y));
             Assert.IsTrue(CanMove);
         }
-
+        /// <summary>
+        /// Moves the player up 1 and checks player position and checks tile
+        /// </summary>
         [TestMethod]
         public void Player_CanMoveUp()
         {
@@ -42,7 +51,9 @@ namespace UnitTest_ShawnBernard
             Assert.AreEqual(0, CheckTile(X, Y));
             Assert.IsTrue(CanMove);
         }
-
+        /// <summary>
+        /// Moves the player down 1 and checks player position and checks tile
+        /// </summary>
         [TestMethod]
         public void Player_CanMoveDown()
         {
@@ -52,7 +63,9 @@ namespace UnitTest_ShawnBernard
             Assert.AreEqual(0, CheckTile(X, Y)); 
             Assert.IsTrue(CanMove);
         }
-
+        /// <summary>
+        /// Goes up left the map width and checks player position and checks tile
+        /// </summary>
         [TestMethod]
         public void Player_MoveLeftIntoWall()
         {
@@ -65,7 +78,9 @@ namespace UnitTest_ShawnBernard
             Assert.AreEqual(1, CheckTile(X, Y));
             Assert.IsFalse(CanMove);
         }
-
+        /// <summary>
+        /// Goes right untill the map width and checks player position and checks tile
+        /// </summary>
         [TestMethod]
         public void Player_MoveRightIntoWall()
         {
@@ -78,7 +93,9 @@ namespace UnitTest_ShawnBernard
             Assert.AreEqual(1, CheckTile(X, Y));
             Assert.IsFalse(CanMove);
         }
-
+        /// <summary>
+        /// Goes up untill the map height and checks player position and checks tile
+        /// </summary>
         [TestMethod]
         public void Player_MoveUpIntoWall()
         {
@@ -91,7 +108,9 @@ namespace UnitTest_ShawnBernard
             Assert.AreEqual(1, CheckTile(X, Y));
             Assert.IsFalse(CanMove);
         }
-
+        /// <summary>
+        /// Goes down untill the map height and checks player position and checks tile
+        /// </summary>
         [TestMethod]
         public void Player_MoveDownIntoWall()
         {
@@ -110,6 +129,7 @@ namespace UnitTest_ShawnBernard
     /// </summary>
     public class Player
     {
+
         int[,] Map;
         /// <summary>
         /// The maps width

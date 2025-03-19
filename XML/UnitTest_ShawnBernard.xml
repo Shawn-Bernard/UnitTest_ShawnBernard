@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTest_ShawnBernard</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTest_ShawnBernard.Direction">
+            <summary>
+            A direction that has state for up, down, left and right
+            </summary>
+        </member>
+        <member name="T:UnitTest_ShawnBernard.UnitTest_Player">
+            <summary>
+            Unit testing for player that uses the player move
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.UnitTest_Player.Player_CanMoveRight">
+            <summary>
+            Moves the player right 1 and checks player position and checks tile
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.UnitTest_Player.Player_CanMoveLeft">
+            <summary>
+            Moves the player left1 and checks player position and checks tile
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.UnitTest_Player.Player_CanMoveUp">
+            <summary>
+            Moves the player up 1 and checks player position and checks tile
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.UnitTest_Player.Player_CanMoveDown">
+            <summary>
+            Moves the player down 1 and checks player position and checks tile
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.UnitTest_Player.Player_MoveLeftIntoWall">
+            <summary>
+            Goes up left the map width and checks player position and checks tile
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.UnitTest_Player.Player_MoveRightIntoWall">
+            <summary>
+            Goes right untill the map width and checks player position and checks tile
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.UnitTest_Player.Player_MoveUpIntoWall">
+            <summary>
+            Goes up untill the map height and checks player position and checks tile
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.UnitTest_Player.Player_MoveDownIntoWall">
+            <summary>
+            Goes down untill the map height and checks player position and checks tile
+            </summary>
+        </member>
+        <member name="T:UnitTest_ShawnBernard.Player">
+            <summary>
+            My player that holds all methods
+            </summary>
+        </member>
+        <member name="F:UnitTest_ShawnBernard.Player.MapWidth">
+            <summary>
+            The maps width
+            </summary>
+        </member>
+        <member name="F:UnitTest_ShawnBernard.Player.MapHeight">
+            <summary>
+            The maps height
+            </summary>
+        </member>
+        <member name="F:UnitTest_ShawnBernard.Player.CanMove">
+            <summary>
+            Bool to see if you can move
+            </summary>
+        </member>
+        <member name="F:UnitTest_ShawnBernard.Player.X">
+            <summary>
+            Gets the player's X coordinate.
+            </summary>
+        </member>
+        <member name="F:UnitTest_ShawnBernard.Player.Y">
+            <summary>
+            Gets the player's Y coordinate.
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.Player.StartMap">
+            <summary>
+            Making a map using 2D array
+            </summary>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.Player.CheckTile(System.Int32,System.Int32)">
+            <summary>
+            Used to check the value of the position and returns it 
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns>Returns a tile int value from the x/y position</returns>
+        </member>
+        <member name="M:UnitTest_ShawnBernard.Player.Move(UnitTest_ShawnBernard.Direction)">
+            <summary>
+            Switch state for movement depending on which direction is put in and checks if the players within bounds
+            </summary>
+            <param name="direction"></param>
+            <returns>Returns true if the player is within bounds, returns false if not</returns>
+        </member>
+    </members>
+</doc>
